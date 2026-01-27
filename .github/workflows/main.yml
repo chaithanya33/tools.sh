@@ -13,6 +13,7 @@ jobs:
       - name: Run shell commands
         run: |
          mkdir one
+         touch one/.gitkeep
          git config --global user.email "chaithanyagopineedi@gmail.com"
          git config --global user.name "chaithanya33"
          git add one
