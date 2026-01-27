@@ -13,5 +13,6 @@ jobs:
       - name: Run shell commands
         run: |
           echo "Hello GitHub Actions"
+          echo "mkdir one"
           pwd
           ls -la
