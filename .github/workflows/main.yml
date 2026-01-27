@@ -1,21 +1,30 @@
-name: Basic Shell Commands
+name: ci
 
-on: [push]
+on:
+  push:
+    branches:
+      - main
+
+permissions:
+  contents: write
 
 jobs:
-  demo:
+  build:
     runs-on: ubuntu-latest
 
     steps:
       - name: Checkout code
         uses: actions/checkout@v4
 
-      - name: Run shell commands
+      - name: Create folder and push
         run: |
-         mkdir one
-         touch one/.gitkeep
-         git config --global user.email "chaithanyagopineedi@gmail.com"
-         git config --global user.name "chaithanya33"
-         git add one
-         git commit -m "Add folder one"
-         git push
+          mkdir -p two
+          touch two/.gitkeep
+
+          git config --global user.email "chaithanyagopineedi@gmail.com"
+          git config --global user.name "chaithanya33"
+
+          git add two
+          git commit -m "Add folder two with .gitkeep" || echo "Nothing to commit"
+
+          git push
