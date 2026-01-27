@@ -12,7 +12,9 @@ jobs:
 
       - name: Run shell commands
         run: |
-          echo "Hello GitHub Actions"
-          echo  mkdir one
-          pwd
-          ls -la
+         mkdir one
+         git config --global user.email "chaithanyagopineedi@gmail.com"
+         git config --global user.name "chaithanya33"
+         git add one
+         git commit -m "Add folder one"
+         git push
