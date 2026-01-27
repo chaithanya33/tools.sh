@@ -1,1 +1,17 @@
+name: Basic Shell Commands
 
+on: [push]
+
+jobs:
+  demo:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+
+      - name: Run shell commands
+        run: |
+          echo "Hello GitHub Actions"
+          pwd
+          ls -la
