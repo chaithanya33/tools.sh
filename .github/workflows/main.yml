@@ -4,8 +4,6 @@ jobs:
   build:
     runs-on: ubuntu-latest
     steps:
-     - name: bild step
-      run |
-      echo "helloworld"
+      - name: test
+        run: echo "ci-works"
 
- 
