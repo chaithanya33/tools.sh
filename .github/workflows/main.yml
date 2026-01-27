@@ -1,28 +1,10 @@
 name: ci
-
-on:
-  push:
-    branches:
-      - main
-
-permissions:
-  contents: write
-
+on: workflow_dispatch
 jobs:
-  build:
-    runs-on: ubuntu-latest
-
-    steps:
-      - name: Checkout code
-        uses: actions/checkout@v4
-
-      - name: Create folder and push
-        run: |
-          mkdir -p three
-          git config --global user.email "chaithanyagopineedi@gmail.com"
-          git config --global user.name "chaithanya33"
-
-          git add two
-          git commit -m "3 commit " || echo "Nothing to commit"
-
-          git push
+ build:
+  runs-on: ubuntu-latest
+	steps:
+	- name: build ajob
+   	run: echo "print hello"
+	  
+	
