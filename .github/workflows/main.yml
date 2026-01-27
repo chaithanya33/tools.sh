@@ -18,13 +18,11 @@ jobs:
 
       - name: Create folder and push
         run: |
-          mkdir -p two
-          touch two/.gitkeep
-
+          mkdir -p three
           git config --global user.email "chaithanyagopineedi@gmail.com"
           git config --global user.name "chaithanya33"
 
           git add two
-          git commit -m "Add folder two with .gitkeep" || echo "Nothing to commit"
+          git commit -m "3 commit " || echo "Nothing to commit"
 
           git push
