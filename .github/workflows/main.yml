@@ -4,5 +4,5 @@ jobs:
   build:
     runs-on: ubuntu-latest
     steps:
-      - name: print variable
-        run: echo " hello, ${{ vars.name }}"
+      - name: build step 
+        run: echo " hello, ${{ vars.name1 }}"
