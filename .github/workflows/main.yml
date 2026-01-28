@@ -5,4 +5,4 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: print variable
-        run: echo " hello, ${{ vars.Name }}"
+        run: echo " hello, ${{ vars.name }}"
