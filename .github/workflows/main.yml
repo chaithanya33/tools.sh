@@ -5,4 +5,4 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: build step
-        run: echo "hello, ${{ vars. NAME22 }}"
+        run: echo "hello, ${{ vars. PASSWORD }}"
