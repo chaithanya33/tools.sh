@@ -1,8 +1,8 @@
-name: ci
-on: workflow_dispatch
+name: hello
+on: push
 jobs:
   build:
     runs-on: ubuntu-latest
     steps:
-      - name: build step 
-        run: echo " hello, ${{ vars.NAME11 }}"
+      - name: build step
+        run: echo "hello, ${{ vars.NAME11 }}"
